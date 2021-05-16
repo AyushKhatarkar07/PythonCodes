@@ -1479,5 +1479,120 @@ if req==91:
     girl.getGender()
     
 '''
- Only question 25, 46-53 left //
+ Only question 25, 51-53 left //
+'''
+'''
+46.Define a class named American which has a static method called printNationality.
+
+Hints:
+
+Use @staticmethod decorator to define class static method.
+'''
+if req==46:
+    # method1:
+    
+    class American():
+        def __init__(self, country = 'America'):
+            self.country = country
+            
+        def printNationality(self):
+            print(self.country)
+         
+    person = American('USA')
+    person.printNationality()
+    
+'''
+47.Define a class named American and its subclass NewYorker. 
+
+Hints:
+
+Use class Subclass(ParentClass) to define a subclass.
+'''
+if req==47:
+    class American():
+        def __init__(self, country = 'America'):
+            self.country = country
+            print(self.country)
+            
+
+    class NewYorker(American):
+        def __init__(self, country = 'NewYork'):
+            self.country = country
+            print(self.country)
+            
+    
+    american_person = American()
+    newyorker_person = NewYorker()
+    
+    print(american_person)
+
+'''
+48.Define a class named Circle which can be constructed by a radius. The Circle class has a method which can compute the area. 
+
+Hints:
+
+Use def methodName(self) to define a method.
+'''
+if req==48:
+    class Circle():
+        def __init__(self, radius = 0.0):
+            self.radius = radius
+            
+        def Area(self):
+            return 3.14*(self.radius**2)
+            
+    radii = float(input("ENter the radius of the circle: \n"))
+    myCircle = Circle(radii)
+    print(myCircle.Area())
+
+'''
+49.Define a class named Rectangle which can be constructed by a length and width. The Rectangle class has a method which can compute the area. 
+
+Hints:
+
+Use def methodName(self) to define a method.
+'''
+if req==49:
+    class Rectangle():
+        def __init__(self, length = 0.0, breadth = 0.0):
+            self.length = length
+            self.breadth = breadth
+            
+        def Area(self):
+            return self.length * self.breadth
+            
+    length = float(input("ENter the length of the Rectangle: \n"))
+    breadth = float(input("ENter the breadth of the Rectangle: \n"))
+    myRectangle = Rectangle(length, breadth)
+    print(myRectangle.Area())
+    
+'''
+50.Define a class named Shape and its subclass Square. The Square class has an init function which takes a length as argument. Both classes have a area function which can print the area of the shape where Shape's area is 0 by default.
+
+Hints:
+
+To override a method in super class, we can define a method with the same name in the super class.
+'''
+if req==50:
+    class Shape(object):
+        def __init__(self):
+            pass
+            
+        def Area(self):
+            print(0)
+            
+    class Square(Shape):
+        def __init__(self, length):
+            Shape.__init__(self)
+            self.length = length
+            
+        def Area(self):
+            print(self.length * self.length)
+    
+    length = float(input("Enter the length of square: \n"))
+    sq_object = Square(length)    
+    sq_object.Area()
+    
+ '''
+  4 questions left 25,51,52,53 (To be updated)
  '''
